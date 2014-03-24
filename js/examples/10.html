@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<script>
+	//json
+	function f2()
+	{
+		//alert("123");
+		alert(this.name);
+	}
+	
+	var name = "javascript";
+	//null
+
+	var o1 = 
+	{
+		name:"java",
+		age: 11,
+		f1: function() 
+		{
+			alert("www");
+			//return 1;
+			alert(this.name);
+			return function()
+			{
+				alert(this.name);
+				return 0;
+			}
+		},
+		f11: f2
+	};
+
+	//alert(o1.name + "\t" + o1.age);
+	//o1.f1();
+	o1.f1()();
+	//alert(o1.f1()());
+	//o1.f1();
+	//window.f2();
+	//o1.f11();
+</script>
+</HEAD>
+
+<BODY>
+
+</BODY>
+</HTML>

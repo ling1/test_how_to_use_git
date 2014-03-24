@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<link rel="stylesheet" href="extjs/resources/css/ext-all.css" type="text/css"></link>
+  <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+
+  <script>
+		Ext.onReady(function() {
+			//alert("aaa");
+		/*
+			var p = new Ext.Panel({
+        title: 'My Panel',//标题
+        collapsible:false,//右上角上的那个收缩按钮，设为false则不显示
+        renderTo: 'container',//这个panel显示在html中id为container的层中
+        width:400,
+        height:200,
+        html: "<p>我是内容，我包含的html可以被执行！</p>"//panel主体中的内//容，可以执行html代码
+    });
+	*/
+	/*
+	var p=new Ext.Panel({
+    title: 'Drag me',
+    x: 100,
+    y: 100,
+    renderTo: Ext.getBody(),//x,y,renderTo:Ext.getBody()初始化panel的位置
+    floating: true,//true
+    frame: true,//圆角边框
+    width: 400,
+    height: 200,
+    draggable: {
+        insertProxy: false,//拖动时不虚线显示原始位置
+
+        onDrag : function(e){
+            var pel = this.proxy.getEl();
+            this.x = pel.getLeft(true);
+            this.y = pel.getTop(true);//获取拖动时panel的坐标
+        },
+
+        endDrag : function(e){
+            this.panel.setPosition(this.x, this.y);//移动到最终位置
+        }
+    }
+}).show();//在这里也可以不show（）
+
+	*/
+	/*
+	var p=new Ext.Panel({
+    title: 'Drag me',
+    x: 100,
+    y: 100,
+    renderTo: Ext.getBody(),
+    floating: true,
+    frame: true,
+    width: 400,
+    height: 200,
+    draggable: {
+        insertProxy: false,
+
+        onDrag : function(e){
+            var pel = this.proxy.getEl();
+            this.x = pel.getLeft(true);
+            this.y = pel.getTop(true);
+
+            var s = this.panel.getEl().shadow;
+            if (s) {
+                s.realign(this.x, this.y, pel.getWidth(), pel.getHeight());
+            }
+        },
+        endDrag : function(e){
+            this.panel.setPosition(this.x, this.y);
+        }
+    }
+})
+
+	*/
+
+	var p=new Ext.Panel({
+   id:"panel1",
+        title:"标题",
+        collapsible:true,
+        renderTo:"container",
+        closable:true,
+        width:400,
+        height:300,
+        tbar:[{text:"按钮1",handler:function() {alert("www");}},{text:"按钮2"}], //顶部工具栏
+        bbar:[{text:"按钮1"},{text:"按钮2"}],  //底部工具栏
+        html:"内容",
+        buttons:[{text:"按钮1"},{text:"按钮2"}], //footer部工具栏
+		draggable: {
+        insertProxy: false,
+
+        onDrag : function(e){
+            var pel = this.proxy.getEl();
+            this.x = pel.getLeft(true);
+            this.y = pel.getTop(true);
+
+            var s = this.panel.getEl().shadow;
+            if (s) {
+                s.realign(this.x, this.y, pel.getWidth(), pel.getHeight());
+            }
+        },
+        endDrag : function(e){
+            this.panel.setPosition(this.x, this.y);
+        }
+    }
+   });
+
+		});
+  </script>
+</HEAD>
+
+<BODY>
+<div id="container">
+    </div>
+
+</BODY>
+</HTML>

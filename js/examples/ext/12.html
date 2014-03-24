@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>基本结构2.html</title>
+	<link rel="stylesheet" href="extjs/resources/css/ext-all.css" type="text/css"></link>
+  <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+  <script type="text/javascript">
+  Ext.onReady(function(){
+
+  Ext.get("d1").dom.innerHTML = "loading page...";
+  	Ext.get("b1").on("click",function(){
+  		Ext.Msg.alert("hello,this is b1...",Ext.get("d1").dom.innerHTML);
+  		});
+
+		
+
+
+  	});
+  </script>
+  </head>
+  
+  <body>
+  <button id="b1">提交</button>
+
+  <div id="d1"></div>
+  </body>
+</html>

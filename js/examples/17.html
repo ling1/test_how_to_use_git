@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<script>
+	function f1() {
+		var n = 999;
+		function f2() {
+			alert(n);
+			return 1;
+		};
+		return f2;
+	}
+
+	//alert(f1()());
+
+	var result = f1()();
+	//alert(n);
+</script>
+</HEAD>
+
+<BODY>
+
+</BODY>
+</HTML>

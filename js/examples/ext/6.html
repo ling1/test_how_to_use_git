@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>面板1.html</title>
+	<link rel="stylesheet" href="extjs/resources/css/ext-all.css" type="text/css"></link>
+  <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+  <script type="text/javascript">
+   Ext.onReady(function(){
+   	      var data=[[1,'java1',11,'java1@cs.com.cn'],
+   	      [2,'java2',12,'java2@cs.com.cn'],
+   	      [3,'java3',13,'java3@cs.com.cn'],
+   	      [4,'java4',14,'java4@cs.com.cn'],
+   	      [5,'java5',15,'java5@cs.com.cn'],
+   	      [6,'java6',16,'java6@cs.com.cn']];
+   	      
+   	      
+   	      var store = new Ext.data.SimpleStore({data:data,fields:["id","name","age","email"]});
+   	      var grid = new Ext.grid.GridPanel({
+   	      	   renderTo:"d1",
+   	      	   title:"中国java开源产品及团队",
+   	      	   height:150,//或者autoHeight:true,会自动调整它的高度
+   	      	   width:600,
+   	      	   columns:[{header:"姓名",dataIndex:"name"},
+			   {header:"年龄",dataIndex:"age"},
+			   {header:"邮箱",dataIndex:"email"}],
+   	      	   store:store,
+   	      	   autoExpandColumn:2 //占满剩余空间
+   	      	});
+   	      
+       
+   	});
+
+  </script>
+  </head>
+  
+  <body>
+  <div id="d1"></div>
+  	
+  </body>
+</html>
+
+  
+  
+  	

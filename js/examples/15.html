@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<script>
+	function test() {
+		var v1 = window.document.getElementById("d1");
+
+		var i = 1, j = 1;
+		var result = "";
+		for (i = 1; i <= 9 ; i++ )
+		{
+			for (j = 1; j <= i ; j++)
+			{
+				result += j + "*" + i + "=" + (i*j) + "\t";
+			}
+			result += "<br>";
+		}
+
+		v1.innerHTML = result;
+	}
+
+	//window.onload = test;
+</script>
+</HEAD>
+
+<BODY>
+
+<button id="b1" onClick="test()">test</button>
+<div id="d1"></div>
+</BODY>
+</HTML>

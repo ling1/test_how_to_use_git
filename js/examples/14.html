@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<script>
+	function F1() {
+		this.name = "abc";
+		this.m1 = function() {
+			alert("test");
+		};
+
+		this.m2 = function() {
+			alert("hi");
+		}
+	}
+
+	var f1 = new F1();
+	/*
+	alert(f1.name);
+	alert(f1.age);
+	F1.prototype.age = 100; //
+	alert(F1.age);
+	*/
+	//alert(name);
+
+	//f1.m1();
+	//f1.m2();
+	//this.m2();
+	//window.m2();
+	F1.prototype.age = 100;
+	F1.prototype.email = "www";
+	F1.prototype.m3 = function() {
+		alert("m3");
+	}
+
+	//f1.m3();
+
+	F1.m4 = function() {
+			alert("m4");
+	}
+
+	//F1.m4();
+
+	function F5() {
+		this.email = "aa@abc.com";
+	}
+
+	
+	
+
+	F5.prototype = new F1();
+	var f5  = new F5();
+	/*
+	alert(f5.email);
+	alert(f5.age);
+	f5.m3();
+	alert(f5.name);
+	f5.m1();
+	*/
+	//F5.m4();
+	alert(f5.email);
+</script>
+</HEAD>
+
+<BODY>
+
+</BODY>
+</HTML>

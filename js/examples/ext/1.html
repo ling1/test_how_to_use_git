@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>基本结构.html</title>
+	<link rel="stylesheet" href="extjs/resources/css/ext-all.css" type="text/css"></link>
+  <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+  <script type="text/javascript">
+  /*
+  Ext.onReady(function(){
+  	//alert("hello,extjs..");
+	//Ext.MessageBox.alert("title","content");
+	Ext.Msg.alert("title","content11111111111");
+  	});	
+*/
+	function f1(e) {
+		//alert(e);
+		window.confirm("aaaaaaa","bbbb");
+	}
+
+	Ext.onReady(function() {
+		//Ext.Msg.alert("title111111111","content11111111111",f1);
+		/*
+		Ext.Msg.confirm("1+1","2",function(e) {
+				alert(e);
+		});
+		
+		Ext.Msg.prompt("1+1","2",function(e,text) {
+			alert(e);
+			alert(text);
+		},this,true);
+		
+		Ext.MessageBox.show({
+    title:"标题",
+    msg:"内容的消息",
+    buttons:{"ok":"我不再显示OK了"},
+    fn:function(e){alert(e);},
+    animEl:"test1",
+     width:500,
+    icon:Ext.MessageBox.INFO,
+    closable:false,
+    progress:true,
+    wait:true,
+    progressText:"进度条"
+   // prompt:true
+   // multiline:true
+   });
+   */
+	//Ext.get("btn1")
+
+	var v1 = document.getElementById("btn1");
+	v1.onclick = function() {
+			alert("hi");
+	}
+	
+	var v2 = Ext.get("btn2");
+	/*
+	v2.on("click",function() {
+		Ext.Msg.alert("1","22");
+	});
+	*/
+	v2.dom.onclick = function() {
+			alert("v2");
+	}
+	
+	
+	function f3() {
+		alert("f3");
+	}
+
+	Ext.get("btn3").on("click",f3);
+
+	});
+  </script>
+  </head>
+  
+  <body>
+    <button id="btn1">test1</button>&nbsp;
+	  <button id="btn2">test2</button>&nbsp;
+	<button id="btn3">test3</button>
+  </body>
+</html>

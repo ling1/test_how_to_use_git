@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+
+  </head>
+  
+  <body>
+    <div id="result"></div>
+    <script type="text/javascript">
+    	function start() {
+    		var count = 10;
+    		window.setInterval(function(){
+    			document.getElementById("result").innerHTML += count + "<br/>";
+    			count++;
+    		},5000);
+    	};
+    	start();
+		
+		
+    	
+    </script>
+  </body>
+</html>

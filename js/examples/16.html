@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<script>
+	
+	window.onload = function() {
+		var img1 = document.getElementById("image");
+		img1.src = "image/photo10.jpg";
+	}
+
+	function next() {
+		var img1 = document.getElementById("image");
+		var v1 = img1.src; //= "image/photo10.jpg";
+	
+		//alert(v1.substring(1,5));
+		//alert(v1.indexOf("photo"));
+		//alert(v1.indexOf("."));
+
+		var inx = v1.substring(v1.indexOf("photo")+5,v1.indexOf("."));
+		//alert(inx);
+		inx++;
+		if (inx > 10)
+		{
+			inx = 1;
+		}
+
+		img1.src = "image/photo" + inx + ".jpg";
+		
+	}
+
+
+		function previous() {
+		var img1 = document.getElementById("image");
+		var v1 = img1.src; //= "image/photo10.jpg";
+	
+		//alert(v1.substring(1,5));
+		//alert(v1.indexOf("photo"));
+		//alert(v1.indexOf("."));
+
+		var inx = v1.substring(v1.indexOf("photo")+5,v1.indexOf("."));
+		//alert(inx);
+		inx--;
+		if (inx < 1)
+		{
+			inx = 10;
+		}
+
+		img1.src = "image/photo" + inx + ".jpg";
+		
+	}
+</script>
+</HEAD>
+
+<BODY>
+<img id="image" src="image/photo1.jpg" width="320" height="240"/><br>
+<button id="b1" onClick="next();">next</button>
+<button id="b2" onClick="previous();">pre</button>
+<script>
+	//alert("hi");
+</script>
+</BODY>
+</HTML>

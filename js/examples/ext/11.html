@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>“≥√Ê…Ëº∆.html</title>
+	<link rel="stylesheet" href="extjs/resources/css/ext-all.css" type="text/css"></link>
+  <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+  <script type="text/javascript">
+  Ext.onReady(function(){
+  //	Ext.Msg.alert("hello,extjs....");
+  	var veiwPort = new Ext.Viewport({
+		layout: 'border',
+		width: 600,
+		autoHeight: true,
+		items: [
+		{
+			region: 'north',
+			html: 'north111',
+			//contentEl: 'north',
+			height: 50
+		},{
+			region: 'south',
+			html: 'south111',
+			height: 50
+		},{
+			region: 'west',
+			html: 'west111',
+			width: 50
+		},{
+			region: 'east',
+			html: 'east111',
+			width: 50
+		},{
+			region: 'center',
+			html: 'center111'
+		}
+		]
+	});
+
+  	});
+  </script>
+  </head>
+  
+  <body>
+
+  </body>
+</html>
