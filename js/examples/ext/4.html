@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<link rel="stylesheet" href="extjs/resources/css/ext-all.css" type="text/css"></link>
+  <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+
+  <script>
+		Ext.onReady(function() {
+/*
+var w=new Ext.Window({
+           contentEl:"win",//主体显示的html元素，也//可以写为el:"win"
+           width:300,
+           height:200,
+           title:"标题" 
+        });
+        w.show();
+		*/
+
+		var w=new Ext.Window({
+           contentEl:"win",
+           width:300,
+           height:200,
+           items:new Ext.TabPanel({
+                      activeTab:0,//当前标签为第1个tab（从0开始索引）
+                      border:false,
+                      items:[{title:"tab1",html:"tab1在windows窗口中"},{title:"tab2",html:"tab2在windows窗口中"}]//TabPanel中的标签页，以后再深入讨论
+                 }),
+           plain:true,//true则主体背景透明，false则主体有小差别的背景色，默认为false
+           title:"标题"
+        });
+        w.show();
+
+
+		});
+	</script>
+</HEAD>
+
+<BODY>
+<div id="win" class="x-hidden">
+        </div>
+
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<link rel="stylesheet" href="extjs/resources/css/ext-all.css" type="text/css"></link>
+  <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+
+  <script>
+		Ext.onReady(function() {
+var form1 = new Ext.form.FormPanel({
+       width:350,
+       frame:true,//圆角和浅蓝色背景
+       renderTo:"form1",//呈现
+       title:"FormPanel",
+       bodyStyle:"padding:5px 5px 0",
+       items:[
+          {
+            fieldLabel:"UserName",//文本框标题
+            xtype:"textfield",//表单文本框
+            name:"user",
+            id:"user",
+            width:200
+          },
+          {
+            fieldLabel:"PassWord",
+            xtype:"textfield",
+            name:"pass",
+            id:"pass",
+            width:200
+          }
+       ],
+       buttons:[{text:"确定",handler:logon},{text:"取消",handler:function(){alert("事件！");}}]
+    });
+
+		});
+
+		function logon() {
+			alert("test");
+		}
+</script>
+</HEAD>
+
+<BODY>
+<div id="form1"></div>
+</BODY>
+</HTML>

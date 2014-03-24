@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<script>
+	function f1()
+	{
+		var v1 = window.document.getElementById("d1");
+		v1.innerHTML = "javascript";
+	}
+
+	window.onload = function() 
+	{
+		var v1 = window.document.getElementById("d1");
+		v1.innerHTML = "abc";
+	}
+
+	function f2()
+	{
+		alert("hi");
+	}
+
+	//f2();
+
+	function F3() 
+	{
+		this.color = "blue";
+		sName = "www";//var
+		this.showColor = function()
+		{
+			alert("aaa");
+		}
+		
+		showName = function()
+		{
+			alert("asd");
+		};
+		alert("F3");
+	}
+
+	//F3();
+	 var f31 = new F3();
+	 //alert(f31.color);
+	// alert(f31.sName);
+	 //alert(sName);
+	 alert(this.sName);
+	// alert(window.sName);
+	this.showName();
+	 /*
+	alert(f31.color);
+	f31.showColor();
+	alert(F3());
+	alert(f31);
+	*/
+	//F3.showColor();
+</script>
+</HEAD>
+
+<BODY>
+<button id="b1" onClick="f1();">test</button>
+<div id="d1"></div>
+</BODY>
+</HTML>

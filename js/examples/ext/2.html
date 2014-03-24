@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<link rel="stylesheet" href="extjs/resources/css/ext-all.css" type="text/css"></link>
+  <script type="text/javascript" src="extjs/adapter/ext/ext-base.js"></script>
+  <script type="text/javascript" src="extjs/ext-all.js"></script>
+
+  <script>
+
+	setTimeout(function() {
+		alert("abc");
+	},1000);
+
+	
+	Ext.onReady(function() {
+		//alert("aaa");
+		//var v1 = 1/11;
+		//alert(v1);
+		//alert(Math.round(-1.5));
+	/*
+		Ext.get("btn1").on(
+          "click",
+          function(){
+             Ext.MessageBox.show({
+                 title:"df",
+                 msg:"dfd",
+                 progress:true,
+                 width:300,
+                 closable:true
+             });
+             var f=function(v){
+               return function(){
+                 if(v==12)
+                 {
+                   Ext.MessageBox.hide();
+                   //alert("加载完成！");
+                 }
+                 else
+                 {
+                   var i=v/11; 
+                   Ext.MessageBox.updateProgress(i,Math.round(100*i)+"% completed",i);
+                 }
+               }
+             }
+             for(var i=1;i<13;i++)
+             {
+               setTimeout(f(i),i*500);//从点击时就开始计时，所以500*i表示每500ms就执行一次
+             }
+          }
+   );
+   */
+
+   Ext.get("btn1").on(
+          "click",
+          function(){
+             Ext.MessageBox.show({
+                 title:"时间进度条",
+                 msg:"5s后关闭进度框",
+                 progress:true,
+                 width:300,
+                 wait:true,
+                 waitConfig:{interval:600},//0.6s进度条自动加载一定长度
+                 closable:true
+             });
+             setTimeout(function(){Ext.MessageBox.hide()},5000);//5后执行关闭窗口函数
+          }
+	);
+	});
+	
+
+	
+
+  </script>
+</HEAD>
+
+<BODY>
+ <button id="btn1">test1</button>&nbsp;
+</BODY>
+</HTML>
